@@ -1,8 +1,7 @@
 /*media query voor laptop begint bij 1024px*/
 @media only screen and (min-width: 1024px){
-	/*alle drie charts naast elkaar*/
 
-	@keyframes slide-in-left{
+	@keyframes slide{
   	0%{
         transform: translateX(-50px);
     	opacity: 0;
@@ -18,12 +17,21 @@
     	opacity: 0;
   	}
 
-  	.flex-container{
-  		margin-left: 1000px;
-  	}
+  	.png{
+		padding-top: 100px;
 
+	}
+
+	/*deze regel code doet niet echt iets maar het hoort het raampje wat langer
+	te maken; nu is hij korter dan bij telefoon of tablet*/
 	.day, .night{
 		height: 1000px;
+	}
+	/*ook deze wilt niet naar voren komen in de code. maar als ik dit in de console
+	typ dan doet hij het wel (heeft ergens te maken met inheritance maar kon niet
+	echt vinden waar dat was*/
+	.flex-container{
+		margin-left: 100px;
 	}
 
 	.clock{

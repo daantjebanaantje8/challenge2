@@ -3,7 +3,6 @@ function klok(){
 	var date = today.getDate();
 	var suffix = 'th';
 
-	//bij een variabel kan je wat aan veranderen; niet bij functies
 	var hours = today.getHours();
 	var minutes = today.getMinutes();
 	var seconds = today.getSeconds();
@@ -25,8 +24,9 @@ function klok(){
 	document.getElementById('minutes').innerHTML = minutes;
 
 	
+	// checkt of de waarde kan worden gedeeld door 1 of 2 of 3 en geeft
+	// dan de juiste letters achteraan
 	// 1st but 11th, 2nd but 12th, 3rd but 13th
-
 	if (date % 10 == 1 && date != 11) {
 		var suffix = 'st';
 	}
@@ -37,20 +37,30 @@ function klok(){
 		var suffix = 'rd';
 	}
 
-
+	// volledige datum van vandaag (engels); thursday march 18th
 	document.getElementById('date').innerHTML = days[today.getDay()] + ' ' + months[today.getMonth()] + ' ' + date + suffix ;
 
-
-	if (hours >= 7 && hours <= 19) {
+	//tussen 7 en 17 uur daglicht
+	if (hours >= 7 && hours <= 17) {
 		// remove night class
 		document.getElementById('window').classList.remove('night');
 
 		// add day class
 		document.getElementById('window').classList.add('day');
 
-	}else{
-		// remove day class
-		document.getElementById('window').classList.remove('day')
+	//tussen 17 en 19 uur golden hour(s)
+	}else if(hours >= 17 && hours <= 19){
+		//remove day class
+		document.getElementById('window').classList.remove('day');
+
+		// add golden hour class
+		document.getElementById('window').classList.add('golden');
+	}
+
+	//tussen 19 en 7 uur nacht
+	else{
+		// remove golden hour class
+		document.getElementById('window').classList.remove('golden')
 
 		// add night class
 		document.getElementById('window').classList.add('night');

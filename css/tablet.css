@@ -1,10 +1,5 @@
 /*media query voor tablet begint bij 750px*/
 @media only screen and (min-width: 750px){
-
-	/*.flex-header{
-		height: 150px;
-	}*/
-
 	.smallx{
 		display: none;
 	}
@@ -13,7 +8,6 @@
 	.spacex{
 		display: flex;
     	width: 40%;
-    	/*padding-bottom: 20px;*/
     	margin: 0px auto 20px auto;
 	}
 
@@ -22,7 +16,9 @@
 		margin: 20px 20px 40px 40px;
 	}
 
-	.elon, .day, .night{
+	/*voor nu maar even op 40% ipv 50%; ergens bij een marges gaat het fout
+	en worden beide elon en het raampje te breed*/
+	.elon, .day, .night, .golden{
 		width: 40%;
 	}
 
@@ -41,7 +37,8 @@
 		max-width: 10%;
 	}
 
-	@keyframes slide-in-left{
+	/*aangepaste keyframes voor elke schermgrootte; anders stopte hij te vroeg*/
+	@keyframes slide{
   	0%{
         transform: translateX(-50px);
     	opacity: 0;
