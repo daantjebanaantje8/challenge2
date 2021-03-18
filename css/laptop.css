@@ -1,0 +1,37 @@
+/*media query voor laptop begint bij 1024px*/
+@media only screen and (min-width: 1024px){
+	/*alle drie charts naast elkaar*/
+
+	@keyframes slide-in-left{
+  	0%{
+        transform: translateX(-50px);
+    	opacity: 0;
+  	}
+  	50%{
+
+    	opacity: 1;
+  	}
+
+
+  	100%{
+  		transform: translateX(250px);
+    	opacity: 0;
+  	}
+
+
+	.day, .night{
+		height: 1000px;
+	}
+
+	.clock{
+		max-width: 25%;
+	}
+
+	span{
+		font-size: 4.5vw;
+	}
+
+	#date{
+		font-size: 2.8vw;
+	}
+}

@@ -1,0 +1,77 @@
+/*media query voor tablet begint bij 750px*/
+@media only screen and (min-width: 750px){
+
+	/*.flex-header{
+		height: 150px;
+	}*/
+
+	.smallx{
+		display: none;
+	}
+
+	/*verander naar groter spacex logo*/
+	.spacex{
+		display: flex;
+    	width: 40%;
+    	/*padding-bottom: 20px;*/
+    	margin: 0px auto 20px auto;
+	}
+
+	.elon{
+		display: flex;
+		margin: 20px 20px 40px 40px;
+	}
+
+	.elon, .day, .night{
+		width: 40%;
+	}
+
+	.poster{
+		max-width: 50%;
+		border: 5px solid gold;
+		border-radius: 10px;
+	}
+
+	.flex-container{
+		flex-direction: row;
+	}
+
+	.png{
+		padding-top: 20px;
+		max-width: 10%;
+	}
+
+	@keyframes slide-in-left{
+  	0%{
+        transform: translateX(-50px);
+    	opacity: 0;
+  	}
+  	50%{
+
+    	opacity: 1;
+  	}
+
+
+  	100%{
+  		transform: translateX(180px);
+    	opacity: 0;
+  	}
+}
+
+	.clock{
+		max-width: 25%;
+	}
+
+	span{
+		font-size: 5.5vw;
+	}
+
+	h1{
+		font-size: 4vw;
+	}
+
+	#date{
+		font-size: 3.5vw;
+	}
+
+}
