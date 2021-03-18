@@ -18,6 +18,9 @@
     	opacity: 0;
   	}
 
+  	.flex-container{
+  		margin-left: 1000px;
+  	}
 
 	.day, .night{
 		height: 1000px;
